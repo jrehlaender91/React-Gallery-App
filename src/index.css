@@ -64,6 +64,19 @@ input {
   background-color: #275270;
 }
 
+.no-matches {
+  margin: auto;
+}
+
+.no-matches h2 {
+  margin: 0;
+}
+
+.no-matches svg {
+  scale: 2;
+  margin-bottom: 20px;
+}
+
 .photo-container ul {
   display: flex;
   flex-flow: row wrap;

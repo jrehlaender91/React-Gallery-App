@@ -1,12 +1,17 @@
 import React, { useRef } from 'react'
+import { useNavigate } from "react-router-dom";
 
-function Search(props) {
+function Search({ fetchData }) {
     const searchText = useRef(null);
+    let navigate = useNavigate();
 
     const handleSubmit = e => {
         e.preventDefault();
-        props.searchQuery(searchText.current.value);
-        e.currentTarget.reset();
+        fetchData(searchText.current.value);
+        if (searchText.current.value) {
+            navigate(`/search/${searchText.current.value}`);
+            e.currentTarget.reset();
+        }
     }
 
     return (
