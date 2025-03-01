@@ -1,5 +1,8 @@
-import React, { useRef } from 'react'
+import { useRef } from 'react'
 import { useNavigate } from "react-router-dom";
+import PropTypes from 'prop-types';
+
+// Search component to search for images, it takes a function fetchData as a prop to fetch data from the API depending on the query.
 
 function Search({ fetchData }) {
     const searchText = useRef(null);
@@ -25,6 +28,10 @@ function Search({ fetchData }) {
             </button>
         </form>
     )
+}
+
+Search.propTypes = {
+    fetchData: PropTypes.func.isRequired
 }
 
 export default Search

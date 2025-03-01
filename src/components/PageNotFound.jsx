@@ -1,5 +1,4 @@
-import React from 'react';
-
+// PageNotFound component
 
 function PageNotFound() {
 

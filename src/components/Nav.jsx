@@ -1,6 +1,8 @@
-import React from 'react';
 import { NavLink } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
+// Nav component that displays the navigation links for 3 categories: Cats, Dogs, and Computers.
+// The Nav component receives the setQuery function as a prop from the App component.
 
 function Nav(props) {
 
@@ -13,6 +15,10 @@ function Nav(props) {
             </ul>
         </nav>
     )
+}
+
+Nav.propTypes = {
+    setQuery: PropTypes.func.isRequired
 }
 
 export default Nav
